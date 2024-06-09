@@ -3,7 +3,7 @@
 from __init__ import CONN, CURSOR
 from department import Department
 from employee import Employee
-import ipdb
+# import ipdb
 
 
 def reset_database():
@@ -24,4 +24,8 @@ def reset_database():
 
 
 reset_database()
-ipdb.set_trace()
+payroll = Department.find_by_name("Payroll")
+payroll.location = 7
+
+
+# ipdb.set_trace()
